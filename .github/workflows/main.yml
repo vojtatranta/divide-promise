@@ -1,0 +1,31 @@
+name: Test workflow
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use Node 20.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: "20.x"
+
+      - name: Set up dependencies
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9.x
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Test
+        run: pnpm test
+
+      - name: Types
+        run: pnpm run typecheck
