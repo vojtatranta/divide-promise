@@ -80,9 +80,9 @@
     "dist/index.js",
     "dist/index.js.map",
     "dist/index.d.ts",
-    "dist/Maybe.js",
-    "dist/Maybe.js.map",
-    "dist/Maybe.d.ts"
+    "dist/divide-promise.js",
+    "dist/divide-promise.js.map",
+    "dist/divide-promise.d.ts"
   ],
   "eslintConfig": {
     "extends": [
